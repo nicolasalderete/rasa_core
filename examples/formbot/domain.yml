@@ -8,10 +8,10 @@ intents:
   - deny
   - stop
   - thankyou
+  - greet
 
 entities:
   - cuisine
-  - num_people
   - number
   - feedback
   - seating
@@ -20,7 +20,7 @@ slots:
   cuisine:
     type: unfeaturized
     auto_fill: false
-  num_people:
+  number:
     type: unfeaturized
     auto_fill: false
   outdoor_seating:
@@ -38,20 +38,20 @@ slots:
 templates:
   utter_ask_cuisine:
     - text: "what cuisine?"
-  utter_ask_num_people:
+  utter_ask_number:
     - text: "how many people?"
   utter_ask_outdoor_seating:
     - text: "do you want to seat outside?"
   utter_ask_preferences:
     - text: "please provide additional preferences"
   utter_ask_feedback:
-    - text: "please give your feedback"
+    - text: "please give your feedback on how the conversation is going so far"
   utter_submit:
     - text: "done!"
   utter_slots_values:
-    - text: "got slots:\n
+    - text: "Ok, so you are looking for a restaurant which includes:\n
              - cuisine: {cuisine}\n
-             - num_people: {num_people}\n
+             - nummber: {number}\n
              - outdoor_seating: {outdoor_seating}\n
              - preferences: {preferences}\n
              - feedback: {feedback}"
@@ -63,18 +63,24 @@ templates:
     - text: "do you want to continue?"
   utter_wrong_cuisine:
     - text: "cuisine type is not in the database, please try again"
-  utter_wrong_num_people:
+  utter_wrong_number:
     - text: "number of people should be a positive integer, please try again"
   utter_wrong_outdoor_seating:
     - text: "could not convert input to boolean value, please try again"
   utter_default:
     - text: "sorry, I didn't understand you, please try input something else"
+  utter_greet:
+    - text: "Hello. I am restaurant search assistant. How can  help?"
+  utter_suggest_restaurant:
+    - text: "I can recommend you restaurant La Sicilia. It serves great {cuisine} food!"
 
 actions:
   - utter_slots_values
   - utter_noworries
   - utter_chitchat
   - utter_ask_continue
+  - utter_greet
+  - utter_suggest_restaurant
 
 forms:
   - restaurant_form

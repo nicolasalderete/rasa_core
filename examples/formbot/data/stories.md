@@ -1,13 +1,18 @@
 ## happy path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## unhappy path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -16,10 +21,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## very unhappy path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -34,10 +42,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## stop but continue path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -47,10 +58,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## stop and really stop path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -61,6 +75,8 @@
     - form{"name": null}
 
 ## chitchat stop but continue path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -73,10 +89,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## stop but continue and chitchat path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -89,10 +108,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## chitchat stop but continue and chitchat path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -108,10 +130,13 @@
     - restaurant_form
     - form{"name": null}
     - utter_slots_values
+	- utter_suggest_restaurant
 * thankyou
     - utter_noworries
 
 ## chitchat, stop and really stop path
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -125,6 +150,8 @@
     - form{"name": null}
 
 ## Generated Story 3490283781720101690 (example from interactive learning, "form: " will be excluded from training)
+* greet
+	- utter_greet
 * request_restaurant
     - restaurant_form
     - form{"name": "restaurant_form"}
@@ -137,10 +164,10 @@
     - slot{"cuisine": "mexican"}
     - form: restaurant_form
     - slot{"cuisine": "mexican"}
-    - slot{"requested_slot": "num_people"}
+    - slot{"requested_slot": "number"}
 * form: inform{"number": "2"}
     - form: restaurant_form
-    - slot{"num_people": "2"}
+    - slot{"number": "2"}
     - slot{"requested_slot": "outdoor_seating"}
 * chitchat
     - utter_chitchat

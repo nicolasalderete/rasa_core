@@ -21,7 +21,7 @@ class RestaurantForm(FormAction):
     def required_slots(tracker: Tracker) -> List[Text]:
         """A list of required slots that the form has to fill"""
 
-        return ["cuisine", "num_people", "outdoor_seating",
+        return ["cuisine", "number", "outdoor_seating",
                 "preferences", "feedback"]
 
     def slot_mappings(self):
@@ -34,10 +34,8 @@ class RestaurantForm(FormAction):
 
         return {"cuisine": self.from_entity(entity="cuisine",
                                             not_intent="chitchat"),
-                "num_people": [self.from_entity(entity="num_people",
-                                                intent=["inform",
-                                                        "request_restaurant"]),
-                               self.from_entity(entity="number")],
+                "number": self.from_entity(entity="number",
+										    not_intent="chitchat"),
                 "outdoor_seating": [self.from_entity(entity="seating"),
                                     self.from_intent(intent='affirm',
                                                      value=True),
@@ -106,9 +104,9 @@ class RestaurantForm(FormAction):
                     # validation failed, set slot to None
                     slot_values[slot] = None
 
-            elif slot == 'num_people':
+            elif slot == 'number':
                 if not self.is_int(value) or int(value) <= 0:
-                    dispatcher.utter_template('utter_wrong_num_people',
+                    dispatcher.utter_template('utter_wrong_number',
                                               tracker)
                     # validation failed, set slot to None
                     slot_values[slot] = None

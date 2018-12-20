@@ -1,3 +1,72 @@
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey
+- hey hey
+- hello there
+- hi
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- good morning
+- hii
+- hello sweet boy
+- yoo
+- hey there
+- hiihihi
+- hello sweatheart
+- hellooo
+- helloooo
+- heyo
+- ayyyy whaddup
+- hello?
+- Hallo
+- heya
+- hey bot
+- howdy
+- Hellllooooooo
+- whats up
+- Hei
+- Well hello there ;)
+- I said, helllllloooooO!!!!
+- Heya
+- Whats up my bot
+- hiii
+- heyho
+- hey, let's talk
+- hey let's talk
+- jojojo
+- hey dude
+- hello it is me again
+- what up
+- hi there
+- hi
+- jop
+- hi friend
+- hi there it's me
+- good evening
+- good morning
+- good afternoon
+
 ## intent:request_restaurant
 - im looking for a restaurant
 - can i get [swedish](cuisine) food in any area
@@ -5,14 +74,20 @@
 - id like a restaurant
 - im looking for a restaurant that serves [mediterranean](cuisine) food
 - can i find a restaurant that serves [chinese](cuisine)
-- i am looking for any place that serves [indonesian](cuisine) food for [three](num_people:3)
+- i am looking for any place that serves [indonesian](cuisine) food for 3
 - i need to find a restaurant
 - uh im looking for a restaurant that serves [kosher](cuisine) food
 - uh can i find a restaurant and it should serve [brazilian](cuisine) food
 - im looking for a restaurant serving [italian](cuisine) food
 - restaurant please
-- i'd like to book a table for [two](num_people:2) with [spanish](cuisine) cuisine
-- i need a table for [4](num_people)
+- i'd like to book a table for two with [spanish](cuisine) cuisine
+- i need a table for 4
+- looking for a [chinese](cuisine) restaurant for 5 people with [outdoors](seating) seating
+- I need a table for 2 to sit [indoors](seating)
+- Can you sugest me a restaurant were 6 people could sit [indoors](seating)?
+- I am looking for a restaurant with [outdoor](indoor) seating which serves [thai](cuisine) food
+- please book me a table in a [greek](cuisine) restaurant that has [outdoor](seating) seating
+
 
 ## intent:affirm
 - yeah a cheap restaurant serving international food
@@ -95,7 +170,7 @@
 - how about [indian](cuisine) type of food
 - [polynesian](cuisine) food
 - [mexican](cuisine)
-- instead could it be for [four](num_people:4) people
+- instead could it be for four people
 - any [japanese](cuisine) food
 - what about [thai](cuisine) food
 - how about [asian oriental](cuisine) food
@@ -158,6 +233,10 @@
 - let's go [inside](seating)
 - [inside](seating)
 - [outdoor](seating)
+- with [outdoor](seating) seating
+- [outdoor](seating) seating please
+- maybe [indoor](seating) seating would be better
+- I would prefer [indoor](seating) seating
 - my feedback is [good](feedback)
 - my feedback is [great](feedback)
 - it was [terrible](feedback)
