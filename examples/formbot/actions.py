@@ -35,7 +35,7 @@ class RestaurantForm(FormAction):
         return {"cuisine": self.from_entity(entity="cuisine",
                                             not_intent="chitchat"),
                 "number": self.from_entity(entity="number",
-										    not_intent="chitchat"),
+                                           not_intent="chitchat"),
                 "outdoor_seating": [self.from_entity(entity="seating"),
                                     self.from_intent(intent='affirm',
                                                      value=True),
